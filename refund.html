@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Refund Policy — Whatt | Pingora Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#080c14;--surface:#0e1420;--surface2:#141c2e;--border:rgba(99,179,255,0.12);--accent:#3b82f6;--accent2:#06b6d4;--accent3:#a78bfa;--text:#e8edf5;--muted:#7a8ba8}
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.4}
+    nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4vw;background:rgba(8,12,20,0.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+    .nav-logo{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+    .logo-mark{width:36px;height:36px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:8px;display:grid;place-items:center;font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:#fff;box-shadow:0 0 18px rgba(59,130,246,.35)}
+    .nav-brand{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;color:var(--text)}
+    .nav-brand span{color:var(--accent)}
+    .nav-back{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .2s}
+    .nav-back:hover{color:var(--accent2)}
+    .page-hero{padding:5rem 4vw 3rem;max-width:860px;margin:0 auto}
+    .breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.78rem;color:var(--muted);margin-bottom:1.4rem}
+    .breadcrumb a{color:var(--muted);text-decoration:none;transition:color .2s}.breadcrumb a:hover{color:var(--accent2)}.breadcrumb span{color:var(--border)}
+    .page-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.22);border-radius:100px;padding:.3rem .9rem;font-size:.75rem;font-weight:600;color:#34d399;letter-spacing:.05em;text-transform:uppercase;margin-bottom:1.2rem}
+    .page-hero h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:800;letter-spacing:-.02em;line-height:1.1;margin-bottom:.8rem}
+    .page-hero h1 span{background:linear-gradient(90deg,#34d399,var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .meta-row{display:flex;flex-wrap:wrap;gap:1.2rem;margin-top:1.2rem;padding:1.2rem 1.4rem;background:var(--surface);border:1px solid var(--border);border-radius:10px}
+    .meta-item{font-size:.82rem;color:var(--muted)}.meta-item strong{color:var(--text);font-weight:500}
+    .doc-layout{max-width:860px;margin:0 auto;padding:0 4vw 6rem;display:grid;grid-template-columns:220px 1fr;gap:3rem;align-items:start}
+    @media(max-width:720px){.doc-layout{grid-template-columns:1fr}.toc{display:none}}
+    .toc{position:sticky;top:80px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.4rem;font-size:.83rem}
+    .toc-title{font-family:'Syne',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#34d399;margin-bottom:1rem}
+    .toc ul{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+    .toc ul li a{color:var(--muted);text-decoration:none;transition:color .2s;line-height:1.4}
+    .toc ul li a:hover{color:#34d399}
+    .doc-section{margin-bottom:2.8rem;padding-top:1rem}
+    .clause-num{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#34d399;margin-bottom:.4rem}
+    .doc-section h2{font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:700;margin-bottom:.9rem;padding-bottom:.6rem;border-bottom:1px solid var(--border)}
+    .doc-section p{font-size:.92rem;color:var(--muted);line-height:1.8;margin-bottom:.8rem;font-weight:300}
+    .doc-section p strong{color:var(--text);font-weight:500}
+    .doc-section ul{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin:.6rem 0 .8rem}
+    .doc-section ul li{display:flex;gap:.7rem;font-size:.9rem;color:var(--muted);line-height:1.6;font-weight:300}
+    .doc-section ul li::before{content:'';width:5px;height:5px;background:#34d399;border-radius:50%;flex-shrink:0;margin-top:.55rem}
+    .callout{padding:1rem 1.2rem;border-radius:8px;margin:1rem 0;font-size:.88rem;line-height:1.65;border-left:3px solid}
+    .callout-info{background:rgba(59,130,246,.07);border-color:var(--accent);color:var(--accent2)}
+    .callout-warn{background:rgba(251,146,60,.07);border-color:#fb923c;color:#fcd34d}
+    .callout-green{background:rgba(52,211,153,.07);border-color:#34d399;color:#34d399}
+    footer{background:var(--bg);border-top:1px solid var(--border);padding:3rem 4vw 2rem}
+    .footer-top{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid var(--border)}
+    @media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr}}@media(max-width:500px){.footer-top{grid-template-columns:1fr}}
+    .footer-brand p{color:var(--muted);font-size:.85rem;line-height:1.7;margin-top:.8rem;max-width:280px;font-weight:300}
+    .footer-col h4{font-family:'Syne',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text);margin-bottom:1.1rem}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+    .footer-col ul li a{text-decoration:none;color:var(--muted);font-size:.83rem;transition:color .2s}
+    .footer-col ul li a:hover{color:var(--accent2)}
+    .footer-bottom{max-width:1200px;margin:2rem auto 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+    .footer-bottom p{font-size:.78rem;color:var(--muted)}
+    .footer-bottom-links{display:flex;gap:1.5rem}
+    .footer-bottom-links a{font-size:.78rem;color:var(--muted);text-decoration:none;transition:color .2s}
+    .footer-bottom-links a:hover{color:var(--text)}
+  </style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html"><div class="logo-mark">P</div><span class="nav-brand">Pingora <span>Technologies</span></span></a>
+  <a class="nav-back" href="index.html">← Back to Home</a>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb"><a href="index.html">Home</a><span>/</span><a href="index.html#products">Whatt</a><span>/</span><span style="color:var(--text)">Refund Policy</span></div>
+  <div class="page-badge">💳 Refunds & Payments</div>
+  <h1>Refund Policy<br/><span>&amp; Payment Terms</span></h1>
+  <div class="meta-row">
+    <div class="meta-item"><strong>Product:</strong> Whatt??? (whatt.in)</div>
+    <div class="meta-item"><strong>Company:</strong> Pingora Technologies Pvt. Ltd.</div>
+    <div class="meta-item"><strong>Last Updated:</strong> February 15, 2026</div>
+    <div class="meta-item"><strong>Payment Gateway:</strong> Razorpay</div>
+  </div>
+</div>
+
+<div class="doc-layout">
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ul>
+      <li><a href="#intro">Overview</a></li>
+      <li><a href="#s1">1. General Policy</a></li>
+      <li><a href="#s2">2. Eligible Refunds</a></li>
+      <li><a href="#s3">3. Non-Refundable Items</a></li>
+      <li><a href="#s4">4. How to Request</a></li>
+      <li><a href="#s5">5. Refund Processing</a></li>
+      <li><a href="#s6">6. Chargebacks</a></li>
+      <li><a href="#s7">7. Contact</a></li>
+    </ul>
+  </aside>
+  <main>
+    <div class="doc-section" id="intro">
+      <div class="clause-num">Overview</div>
+      <h2>About This Policy</h2>
+      <p>This Refund Policy governs all payments made on the <strong>Whatt???</strong> platform operated by Pingora Technologies Private Limited. All payments are processed via <strong>Razorpay</strong> in Indian Rupees (INR) unless otherwise stated.</p>
+      <div class="callout callout-green">We strive to be fair and transparent. If you have a genuine payment concern, please contact us — we are here to help.</div>
+    </div>
+    <div class="doc-section" id="s1">
+      <div class="clause-num">Section 01</div>
+      <h2>General Policy</h2>
+      <p>All purchases on Whatt??? are for digital services consumed in real time. As a general rule:</p>
+      <ul>
+        <li>Completed call sessions are <strong>non-refundable</strong> once the service has been rendered</li>
+        <li>Wallet top-ups and credits added to your account are non-refundable once used</li>
+        <li>Subscriptions or premium features are non-refundable after activation</li>
+      </ul>
+    </div>
+    <div class="doc-section" id="s2">
+      <div class="clause-num">Section 02</div>
+      <h2>Eligible Refunds</h2>
+      <p>We will consider refund requests in the following circumstances:</p>
+      <ul>
+        <li><strong>Duplicate charge:</strong> Your account was charged more than once for the same transaction</li>
+        <li><strong>Technical failure:</strong> A call failed to connect or terminated prematurely due to a platform-side error, and no service was delivered</li>
+        <li><strong>Unauthorized transaction:</strong> A charge was made on your account without your authorization (subject to investigation)</li>
+        <li><strong>Service not delivered:</strong> A paid feature was not activated or accessible due to a verified system error</li>
+      </ul>
+      <div class="callout callout-info">All refund requests are subject to investigation and must be supported with relevant transaction IDs and a description of the issue.</div>
+    </div>
+    <div class="doc-section" id="s3">
+      <div class="clause-num">Section 03</div>
+      <h2>Non-Refundable Items</h2>
+      <ul>
+        <li>Completed call sessions, regardless of outcome or user satisfaction</li>
+        <li>Wallet credits or top-ups that have been fully or partially used</li>
+        <li>Account suspension or termination due to policy violations</li>
+        <li>Subscription fees for periods already in use</li>
+        <li>Promotional credits, bonuses, or gifted amounts</li>
+      </ul>
+      <div class="callout callout-warn">Refunds will not be issued for dissatisfaction with other users' behavior. Please use the in-app report feature to flag conduct issues.</div>
+    </div>
+    <div class="doc-section" id="s4">
+      <div class="clause-num">Section 04</div>
+      <h2>How to Request a Refund</h2>
+      <p>To submit a refund request, please email us with the following details:</p>
+      <ul>
+        <li>Your registered username on Whatt???</li>
+        <li>Razorpay Payment ID / Transaction ID</li>
+        <li>Date and amount of the charge</li>
+        <li>A clear description of the issue</li>
+        <li>Any supporting screenshots or evidence</li>
+      </ul>
+      <p>Send your request to: <strong>support@pingoratech.in</strong> with the subject line <strong>"Refund Request — [Transaction ID]"</strong>.</p>
+    </div>
+    <div class="doc-section" id="s5">
+      <div class="clause-num">Section 05</div>
+      <h2>Refund Processing</h2>
+      <ul>
+        <li>Approved refunds are processed within <strong>7–10 business days</strong></li>
+        <li>Refunds are credited to the original payment method used</li>
+        <li>Processing timelines may vary based on your bank or card issuer</li>
+        <li>We will notify you via in-app message or email once a refund is processed</li>
+      </ul>
+    </div>
+    <div class="doc-section" id="s6">
+      <div class="clause-num">Section 06</div>
+      <h2>Chargebacks</h2>
+      <p>If you initiate a chargeback with your bank without first contacting us, we reserve the right to:</p>
+      <ul>
+        <li>Suspend or terminate your account pending resolution</li>
+        <li>Contest the chargeback with transaction evidence</li>
+        <li>Recover outstanding amounts through lawful means</li>
+      </ul>
+      <p>We encourage you to reach out to us first — we are committed to resolving genuine disputes fairly.</p>
+    </div>
+    <div class="doc-section" id="s7">
+      <div class="clause-num">Section 07</div>
+      <h2>Contact</h2>
+      <ul>
+        <li><strong>Email:</strong> support@pingoratech.in</li>
+        <li><strong>Company:</strong> Pingora Technologies Private Limited</li>
+        <li><strong>Address:</strong> No 628/8, Tavarakere Madiwala, Tavarekere, Bangalore, Karnataka, India — 560029</li>
+      </ul>
+    </div>
+  </main>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:.7rem;margin-bottom:.2rem"><div class="logo-mark">P</div><span style="font-family:'Syne',sans-serif;font-weight:700;font-size:1rem">Pingora Technologies</span></div>
+      <p>Empowering businesses with intelligent software, data-driven insights, and real-time communication infrastructure.</p>
+    </div>
+    <div class="footer-col"><h4>Products</h4><ul><li><a href="https://whatt.in" target="_blank">whatt.in ↗</a></li></ul></div>
+    <div class="footer-col"><h4>Legal</h4><ul><li><a href="terms.html">Terms &amp; Conditions</a></li><li><a href="privacy.html">Privacy Policy</a></li><li><a href="refund.html" style="color:#34d399">Refund Policy</a></li><li><a href="cookie.html">Cookie Policy</a></li></ul></div>
+    <div class="footer-col"><h4>Company</h4><ul><li><a href="index.html#about">About Us</a></li><li><a href="index.html#services">Services</a></li><li><a href="index.html#contact">Contact</a></li></ul></div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Pingora Technologies Private Limited. All rights reserved.</p>
+    <div class="footer-bottom-links"><a href="terms.html">T&amp;C</a><a href="privacy.html">Privacy</a><a href="mailto:support@pingoratech.in">support@pingoratech.in</a></div>
+  </div>
+</footer>
+</body>
+</html>

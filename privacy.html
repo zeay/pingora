@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy — Whatt | Pingora Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#080c14;--surface:#0e1420;--surface2:#141c2e;
+      --border:rgba(99,179,255,0.12);--accent:#3b82f6;--accent2:#06b6d4;
+      --accent3:#a78bfa;--text:#e8edf5;--muted:#7a8ba8;--glow:rgba(59,130,246,0.15);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.4}
+
+    nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4vw;background:rgba(8,12,20,0.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+    .nav-logo{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+    .logo-mark{width:36px;height:36px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:8px;display:grid;place-items:center;font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:#fff;box-shadow:0 0 18px rgba(59,130,246,.35)}
+    .nav-brand{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;color:var(--text)}
+    .nav-brand span{color:var(--accent)}
+    .nav-back{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .2s}
+    .nav-back:hover{color:var(--accent2)}
+
+    .page-hero{padding:5rem 4vw 3rem;max-width:860px;margin:0 auto}
+    .breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.78rem;color:var(--muted);margin-bottom:1.4rem}
+    .breadcrumb a{color:var(--muted);text-decoration:none;transition:color .2s}
+    .breadcrumb a:hover{color:var(--accent2)}
+    .breadcrumb span{color:var(--border)}
+    .page-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.22);border-radius:100px;padding:.3rem .9rem;font-size:.75rem;font-weight:600;color:var(--accent3);letter-spacing:.05em;text-transform:uppercase;margin-bottom:1.2rem}
+    .page-hero h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:800;letter-spacing:-.02em;line-height:1.1;margin-bottom:.8rem}
+    .page-hero h1 span{background:linear-gradient(90deg,var(--accent3),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .meta-row{display:flex;flex-wrap:wrap;gap:1.2rem;margin-top:1.2rem;padding:1.2rem 1.4rem;background:var(--surface);border:1px solid var(--border);border-radius:10px}
+    .meta-item{font-size:.82rem;color:var(--muted)}
+    .meta-item strong{color:var(--text);font-weight:500}
+
+    .doc-layout{max-width:860px;margin:0 auto;padding:0 4vw 6rem;display:grid;grid-template-columns:220px 1fr;gap:3rem;align-items:start}
+    @media(max-width:720px){.doc-layout{grid-template-columns:1fr}.toc{display:none}}
+
+    .toc{position:sticky;top:80px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.4rem;font-size:.83rem}
+    .toc-title{font-family:'Syne',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent3);margin-bottom:1rem}
+    .toc ul{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+    .toc ul li a{color:var(--muted);text-decoration:none;transition:color .2s;line-height:1.4}
+    .toc ul li a:hover{color:var(--accent3)}
+
+    .doc-content{}
+    .doc-section{margin-bottom:2.8rem;padding-top:1rem}
+    .clause-num{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent3);margin-bottom:.4rem}
+    .doc-section h2{font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:700;margin-bottom:.9rem;padding-bottom:.6rem;border-bottom:1px solid var(--border)}
+    .doc-section h3{font-family:'Syne',sans-serif;font-size:1rem;font-weight:700;color:var(--text);margin:1.2rem 0 .6rem}
+    .doc-section p{font-size:.92rem;color:var(--muted);line-height:1.8;margin-bottom:.8rem;font-weight:300}
+    .doc-section p strong{color:var(--text);font-weight:500}
+    .doc-section ul{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin:.6rem 0 .8rem}
+    .doc-section ul li{display:flex;gap:.7rem;font-size:.9rem;color:var(--muted);line-height:1.6;font-weight:300}
+    .doc-section ul li::before{content:'';width:5px;height:5px;background:var(--accent3);border-radius:50%;flex-shrink:0;margin-top:.55rem}
+
+    /* DATA TABLE */
+    .data-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem}
+    .data-table th{background:var(--surface2);color:var(--text);font-weight:600;padding:.7rem 1rem;text-align:left;border-bottom:1px solid var(--border)}
+    .data-table td{padding:.65rem 1rem;color:var(--muted);border-bottom:1px solid rgba(99,179,255,.06);vertical-align:top;line-height:1.6}
+    .data-table tr:last-child td{border-bottom:none}
+
+    .callout{padding:1rem 1.2rem;border-radius:8px;margin:1rem 0;font-size:.88rem;line-height:1.65;border-left:3px solid}
+    .callout-warn{background:rgba(251,146,60,.07);border-color:#fb923c;color:#fcd34d}
+    .callout-info{background:rgba(59,130,246,.07);border-color:var(--accent);color:var(--accent2)}
+    .callout-alert{background:rgba(248,113,113,.07);border-color:#f87171;color:#fca5a5}
+    .callout-purple{background:rgba(167,139,250,.07);border-color:var(--accent3);color:var(--accent3)}
+
+    footer{background:var(--bg);border-top:1px solid var(--border);padding:3rem 4vw 2rem}
+    .footer-top{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid var(--border)}
+    @media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr}}
+    @media(max-width:500px){.footer-top{grid-template-columns:1fr}}
+    .footer-brand p{color:var(--muted);font-size:.85rem;line-height:1.7;margin-top:.8rem;max-width:280px;font-weight:300}
+    .footer-col h4{font-family:'Syne',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text);margin-bottom:1.1rem}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+    .footer-col ul li a{text-decoration:none;color:var(--muted);font-size:.83rem;transition:color .2s}
+    .footer-col ul li a:hover{color:var(--accent2)}
+    .footer-bottom{max-width:1200px;margin:2rem auto 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+    .footer-bottom p{font-size:.78rem;color:var(--muted)}
+    .footer-bottom-links{display:flex;gap:1.5rem}
+    .footer-bottom-links a{font-size:.78rem;color:var(--muted);text-decoration:none;transition:color .2s}
+    .footer-bottom-links a:hover{color:var(--text)}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <div class="logo-mark">P</div>
+    <span class="nav-brand">Pingora <span>Technologies</span></span>
+  </a>
+  <a class="nav-back" href="index.html">← Back to Home</a>
+</nav>
+
+<div class="page-hero">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a><span>/</span>
+    <a href="index.html#products">Whatt</a><span>/</span>
+    <span style="color:var(--text)">Privacy Policy</span>
+  </div>
+  <div class="page-badge">🔒 Privacy Document</div>
+  <h1>Privacy Policy<br/><span>How We Handle Your Data</span></h1>
+  <div class="meta-row">
+    <div class="meta-item"><strong>Product:</strong> Whatt??? (whatt.in)</div>
+    <div class="meta-item"><strong>Company:</strong> Pingora Technologies Pvt. Ltd.</div>
+    <div class="meta-item"><strong>Last Updated:</strong> February 15, 2026</div>
+    <div class="meta-item"><strong>Applies To:</strong> All Whatt??? users aged 18+</div>
+  </div>
+</div>
+
+<div class="doc-layout">
+
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ul>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#s1">1. Information We Collect</a></li>
+      <li><a href="#s2">2. How We Use Information</a></li>
+      <li><a href="#s3">3. Content Monitoring</a></li>
+      <li><a href="#s4">4. Data Storage & Security</a></li>
+      <li><a href="#s5">5. Age Restrictions</a></li>
+      <li><a href="#s6">6. Sharing of Information</a></li>
+      <li><a href="#s7">7. Your Rights</a></li>
+      <li><a href="#s8">8. Account Deletion</a></li>
+      <li><a href="#s9">9. Prohibited Use</a></li>
+      <li><a href="#s10">10. Policy Changes</a></li>
+      <li><a href="#s11">11. Contact</a></li>
+    </ul>
+  </aside>
+
+  <main class="doc-content">
+
+    <div class="doc-section" id="intro">
+      <div class="clause-num">Preamble</div>
+      <h2>Introduction</h2>
+      <p><strong>Pingora Technologies Private Limited</strong> ("Company", "we", "our", or "us") operates the <strong>Whatt???</strong> mobile application ("App"). This Privacy Policy describes how we collect, use, disclose, and protect user information when you use our App.</p>
+      <p>By accessing or using Whatt???, you consent to the data practices described in this Privacy Policy. If you disagree with any part of this Policy, please discontinue use of the App.</p>
+      <div class="callout callout-purple">We are committed to transparency. This policy explains exactly what data we collect, why we collect it, and how it is protected.</div>
+    </div>
+
+    <div class="doc-section" id="s1">
+      <div class="clause-num">Section 01</div>
+      <h2>Information We Collect</h2>
+
+      <h3>Account Information</h3>
+      <p>When you register on Whatt???, we collect the following information:</p>
+      <ul>
+        <li>Username (chosen by you)</li>
+        <li>Password (stored in encrypted form)</li>
+        <li>Optional location information</li>
+        <li>Gender</li>
+        <li>Primary and secondary language preferences</li>
+      </ul>
+      <div class="callout callout-info">We do not require your email address, phone number, or real identity information for registration. Whatt??? is designed to protect your personal identity.</div>
+
+      <h3>Voice and Communication Data — Call Recordings</h3>
+      <p>All audio calls conducted within the App may be <strong>automatically recorded</strong>. This is a core safety mechanism of the platform.</p>
+      <table class="data-table">
+        <tr><th>Attribute</th><th>Detail</th></tr>
+        <tr><td>Purpose</td><td>Safety monitoring, moderation, fraud prevention, legal compliance</td></tr>
+        <tr><td>Storage</td><td>Stored permanently using decentralized IPFS infrastructure</td></tr>
+        <tr><td>Access</td><td>Accessible only by authorized Pingora Technologies personnel</td></tr>
+        <tr><td>Consent</td><td>Users provide explicit consent by using calling features</td></tr>
+      </table>
+
+      <h3>Verification Audio (Female Users)</h3>
+      <p>Female users may submit voice recordings for manual identity verification:</p>
+      <ul>
+        <li>Used solely for verification purposes</li>
+        <li>Reviewed manually by authorized moderators</li>
+        <li>Not stored permanently — deleted after verification is complete</li>
+      </ul>
+
+      <h3>Messages and User Content</h3>
+      <p>Messages exchanged within the platform may be monitored for safety and moderation purposes. We do not read or sell your messages for commercial purposes.</p>
+
+      <h3>Payment Information</h3>
+      <p>Payments are processed via <strong>Razorpay</strong>, our authorized payment gateway. We do not store full card or banking details. Razorpay may collect:</p>
+      <ul>
+        <li>Transaction identifiers and amounts</li>
+        <li>Payment method metadata (card type, last 4 digits)</li>
+        <li>Billing information as required by payment processing regulations</li>
+      </ul>
+
+      <h3>Usage Data</h3>
+      <ul>
+        <li>Device information (model, OS version, device ID)</li>
+        <li>App interaction logs and session data</li>
+        <li>Moderation signals and safety flags</li>
+        <li>IP address and approximate location</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="s2">
+      <div class="clause-num">Section 02</div>
+      <h2>How We Use Your Information</h2>
+      <p>We use the data we collect exclusively for the following purposes:</p>
+      <ul>
+        <li>Providing and improving communication services on the platform</li>
+        <li>Enabling voice calls and real-time messaging features</li>
+        <li>Ensuring user safety and preventing abuse</li>
+        <li>Detecting and preventing fraud, spam, and unauthorized access</li>
+        <li>Processing payments and managing earnings/payouts</li>
+        <li>Enforcing community guidelines and this Privacy Policy</li>
+        <li>Complying with legal obligations and responding to lawful requests</li>
+      </ul>
+      <p>We do <strong>not</strong> use your data for advertising profiling, sell it to third parties, or share it beyond what is described in Section 6.</p>
+    </div>
+
+    <div class="doc-section" id="s3">
+      <div class="clause-num">Section 03</div>
+      <h2>User Generated Content Monitoring</h2>
+      <p>To maintain a safe platform, we employ a combination of:</p>
+      <ul>
+        <li><strong>Automated safety systems</strong> — algorithmic detection of harmful patterns, prohibited content, and policy violations</li>
+        <li><strong>Human moderation teams</strong> — authorized personnel who review flagged activity and call recordings when necessary</li>
+      </ul>
+      <div class="callout callout-alert">By using Whatt???, you acknowledge that your voice calls and messages may be reviewed by our moderation team in accordance with this policy and applicable law.</div>
+    </div>
+
+    <div class="doc-section" id="s4">
+      <div class="clause-num">Section 04</div>
+      <h2>Data Storage and Security</h2>
+      <table class="data-table">
+        <tr><th>Data Type</th><th>Storage Location</th><th>Retention</th></tr>
+        <tr><td>Account data</td><td>AWS India infrastructure</td><td>Duration of account + legal hold</td></tr>
+        <tr><td>Call recordings</td><td>Decentralized IPFS network</td><td>Permanent (safety/legal)</td></tr>
+        <tr><td>Verification audio</td><td>Secure temporary storage</td><td>Deleted post-verification</td></tr>
+        <tr><td>Payment records</td><td>Razorpay (PCI-compliant)</td><td>Per Razorpay policy</td></tr>
+        <tr><td>Usage logs</td><td>AWS India infrastructure</td><td>Rolling 12-month window</td></tr>
+      </table>
+      <p>We apply <strong>reasonable technical and organizational safeguards</strong> to protect your information, including encryption in transit (TLS), access controls, and security monitoring. However, no system is 100% immune to breach, and we cannot guarantee absolute security.</p>
+    </div>
+
+    <div class="doc-section" id="s5">
+      <div class="clause-num">Section 05</div>
+      <h2>Age Restrictions</h2>
+      <div class="callout callout-alert">The Whatt??? App is strictly limited to users aged 18 years or older. We do not knowingly collect personal information from minors. If we become aware that a user under 18 has registered, their account will be terminated and data deleted immediately.</div>
+      <p>By registering, you represent and warrant that you are at least 18 years of age. Parents or guardians who believe a minor has accessed the platform should contact us immediately at <strong>support@pingoratech.in</strong>.</p>
+    </div>
+
+    <div class="doc-section" id="s6">
+      <div class="clause-num">Section 06</div>
+      <h2>Sharing of Information</h2>
+      <p><strong>We do not sell your personal data.</strong> Information may be shared only in the following circumstances:</p>
+      <ul>
+        <li><strong>Payment processors:</strong> Transaction data shared with Razorpay for payment processing</li>
+        <li><strong>Legal authorities:</strong> Where required by law, court order, or government request</li>
+        <li><strong>Safety emergencies:</strong> Where disclosure is necessary to prevent imminent harm</li>
+        <li><strong>Business transfers:</strong> In the event of a merger, acquisition, or asset sale (users will be notified)</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="s7">
+      <div class="clause-num">Section 07</div>
+      <h2>Your Rights</h2>
+      <p>As a user of Whatt???, you have the following rights with respect to your data:</p>
+      <ul>
+        <li><strong>Block or report</strong> other users who violate community guidelines</li>
+        <li><strong>Delete your account</strong> at any time via App Settings</li>
+        <li><strong>Request data removal</strong> for certain categories of personal data where technically and legally feasible</li>
+        <li><strong>Access information</strong> about what data we hold about you</li>
+        <li><strong>Withdraw consent</strong> for optional data collection where applicable</li>
+      </ul>
+      <p>To exercise any of these rights, please contact us at <strong>support@pingoratech.in</strong>. We will respond within 30 days of receiving a valid request.</p>
+    </div>
+
+    <div class="doc-section" id="s8">
+      <div class="clause-num">Section 08</div>
+      <h2>Account Deletion</h2>
+      <p>You may delete your account at any time via <strong>Settings → Account → Delete Account</strong> within the App. Upon deletion:</p>
+      <ul>
+        <li>Your profile and account credentials will be removed from active systems</li>
+        <li>Call recordings may be <strong>retained</strong> for safety, moderation, and legal compliance purposes as described in Section 4</li>
+        <li>Payment records may be retained as required by financial regulations</li>
+        <li>Anonymized usage data may be retained for platform analytics</li>
+      </ul>
+      <div class="callout callout-warn">Deleting your account does not automatically result in deletion of all associated data. Certain records are retained per legal and safety obligations.</div>
+    </div>
+
+    <div class="doc-section" id="s9">
+      <div class="clause-num">Section 09</div>
+      <h2>Prohibited Use of Data</h2>
+      <p>Users must not attempt to:</p>
+      <ul>
+        <li>Exchange external contact information (phone numbers, email, social handles) with other users</li>
+        <li>Collect or harvest personal data of other users through any means</li>
+        <li>Use platform data for unsolicited commercial communication</li>
+        <li>Engage in any activity that compromises the privacy or safety of other users</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="s10">
+      <div class="clause-num">Section 10</div>
+      <h2>Changes to This Policy</h2>
+      <p>We may update this Privacy Policy periodically to reflect changes in our practices, technology, or legal requirements. When we make material changes:</p>
+      <ul>
+        <li>The "Last Updated" date at the top of this page will be revised</li>
+        <li>We will notify users via in-app notification or email (where available)</li>
+        <li>Continued use of the App after changes take effect constitutes acceptance of the updated policy</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="s11">
+      <div class="clause-num">Section 11</div>
+      <h2>Contact Us</h2>
+      <p>For privacy-related inquiries, data requests, or to report a concern:</p>
+      <ul>
+        <li><strong>Company:</strong> Pingora Technologies Private Limited</li>
+        <li><strong>Email:</strong> support@pingoratech.in</li>
+        <li><strong>Address:</strong> No 628/8, Tavarakere Madiwala, Tavarekere, Bangalore, Karnataka, India — 560029</li>
+      </ul>
+      <div class="callout callout-purple">We are committed to resolving privacy concerns promptly. Please allow up to 30 days for data-related requests and 72 hours for general privacy queries.</div>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:.7rem;margin-bottom:.2rem">
+        <div class="logo-mark">P</div>
+        <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:1rem">Pingora Technologies</span>
+      </div>
+      <p>Empowering businesses with intelligent software, data-driven insights, and real-time communication infrastructure.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul><li><a href="https://whatt.in" target="_blank">whatt.in ↗</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+        <li><a href="privacy.html" style="color:var(--accent3)">Privacy Policy</a></li>
+        <li><a href="refund.html">Refund Policy</a></li>
+        <li><a href="cookie.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Pingora Technologies Private Limited. All rights reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="terms.html">T&amp;C</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:support@pingoratech.in">support@pingoratech.in</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

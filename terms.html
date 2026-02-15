@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Terms & Conditions — Whatt | Pingora Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#080c14;--surface:#0e1420;--surface2:#141c2e;
+      --border:rgba(99,179,255,0.12);--accent:#3b82f6;--accent2:#06b6d4;
+      --accent3:#a78bfa;--text:#e8edf5;--muted:#7a8ba8;--glow:rgba(59,130,246,0.15);
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+    body::before{content:'';position:fixed;inset:0;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");pointer-events:none;z-index:0;opacity:.4}
+
+    /* NAV */
+    nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4vw;background:rgba(8,12,20,0.88);backdrop-filter:blur(16px);border-bottom:1px solid var(--border)}
+    .nav-logo{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+    .logo-mark{width:36px;height:36px;background:linear-gradient(135deg,var(--accent),var(--accent2));border-radius:8px;display:grid;place-items:center;font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;color:#fff;box-shadow:0 0 18px rgba(59,130,246,.35)}
+    .nav-brand{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;color:var(--text)}
+    .nav-brand span{color:var(--accent)}
+    .nav-back{display:inline-flex;align-items:center;gap:.4rem;font-size:.85rem;color:var(--muted);text-decoration:none;transition:color .2s}
+    .nav-back:hover{color:var(--accent2)}
+
+    /* HERO */
+    .page-hero{padding:5rem 4vw 3rem;max-width:860px;margin:0 auto;position:relative}
+    .breadcrumb{display:flex;align-items:center;gap:.5rem;font-size:.78rem;color:var(--muted);margin-bottom:1.4rem}
+    .breadcrumb a{color:var(--muted);text-decoration:none;transition:color .2s}
+    .breadcrumb a:hover{color:var(--accent2)}
+    .breadcrumb span{color:var(--border)}
+    .page-badge{display:inline-flex;align-items:center;gap:.5rem;background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.22);border-radius:100px;padding:.3rem .9rem;font-size:.75rem;font-weight:600;color:var(--accent2);letter-spacing:.05em;text-transform:uppercase;margin-bottom:1.2rem}
+    .page-hero h1{font-family:'Syne',sans-serif;font-size:clamp(2rem,4vw,3.2rem);font-weight:800;letter-spacing:-.02em;line-height:1.1;margin-bottom:.8rem}
+    .page-hero h1 span{background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .meta-row{display:flex;flex-wrap:wrap;gap:1.2rem;margin-top:1.2rem;padding:1.2rem 1.4rem;background:var(--surface);border:1px solid var(--border);border-radius:10px}
+    .meta-item{font-size:.82rem;color:var(--muted)}
+    .meta-item strong{color:var(--text);font-weight:500}
+
+    /* LAYOUT */
+    .doc-layout{max-width:860px;margin:0 auto;padding:0 4vw 6rem;display:grid;grid-template-columns:220px 1fr;gap:3rem;align-items:start}
+    @media(max-width:720px){.doc-layout{grid-template-columns:1fr}.toc{display:none}}
+
+    /* TOC */
+    .toc{position:sticky;top:80px;background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.4rem;font-size:.83rem}
+    .toc-title{font-family:'Syne',sans-serif;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent2);margin-bottom:1rem}
+    .toc ul{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+    .toc ul li a{color:var(--muted);text-decoration:none;transition:color .2s;line-height:1.4}
+    .toc ul li a:hover{color:var(--accent2)}
+
+    /* CONTENT */
+    .doc-content{}
+    .doc-section{margin-bottom:2.8rem;padding-top:1rem}
+    .clause-num{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent2);margin-bottom:.4rem}
+    .doc-section h2{font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:700;margin-bottom:.9rem;padding-bottom:.6rem;border-bottom:1px solid var(--border)}
+    .doc-section p{font-size:.92rem;color:var(--muted);line-height:1.8;margin-bottom:.8rem;font-weight:300}
+    .doc-section p strong{color:var(--text);font-weight:500}
+    .doc-section ul{list-style:none;display:flex;flex-direction:column;gap:.55rem;margin:.6rem 0 .8rem}
+    .doc-section ul li{display:flex;gap:.7rem;font-size:.9rem;color:var(--muted);line-height:1.6;font-weight:300}
+    .doc-section ul li::before{content:'';width:5px;height:5px;background:var(--accent);border-radius:50%;flex-shrink:0;margin-top:.55rem}
+
+    /* CALLOUTS */
+    .callout{padding:1rem 1.2rem;border-radius:8px;margin:1rem 0;font-size:.88rem;line-height:1.65;font-weight:400;border-left:3px solid}
+    .callout-warn{background:rgba(251,146,60,.07);border-color:#fb923c;color:#fcd34d}
+    .callout-info{background:rgba(59,130,246,.07);border-color:var(--accent);color:var(--accent2)}
+    .callout-alert{background:rgba(248,113,113,.07);border-color:#f87171;color:#fca5a5}
+
+    /* FOOTER */
+    footer{background:var(--bg);border-top:1px solid var(--border);padding:3rem 4vw 2rem}
+    .footer-top{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid var(--border)}
+    @media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr}}
+    @media(max-width:500px){.footer-top{grid-template-columns:1fr}}
+    .footer-brand p{color:var(--muted);font-size:.85rem;line-height:1.7;margin-top:.8rem;max-width:280px;font-weight:300}
+    .footer-col h4{font-family:'Syne',sans-serif;font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--text);margin-bottom:1.1rem}
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+    .footer-col ul li a{text-decoration:none;color:var(--muted);font-size:.83rem;transition:color .2s}
+    .footer-col ul li a:hover{color:var(--accent2)}
+    .footer-bottom{max-width:1200px;margin:2rem auto 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem}
+    .footer-bottom p{font-size:.78rem;color:var(--muted)}
+    .footer-bottom-links{display:flex;gap:1.5rem}
+    .footer-bottom-links a{font-size:.78rem;color:var(--muted);text-decoration:none;transition:color .2s}
+    .footer-bottom-links a:hover{color:var(--text)}
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <div class="logo-mark">P</div>
+    <span class="nav-brand">Pingora <span>Technologies</span></span>
+  </a>
+  <a class="nav-back" href="index.html">← Back to Home</a>
+</nav>
+
+<!-- HERO -->
+<div class="page-hero">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a><span>/</span>
+    <a href="index.html#products">Whatt</a><span>/</span>
+    <span style="color:var(--text)">Terms & Conditions</span>
+  </div>
+  <div class="page-badge">📋 Legal Document</div>
+  <h1>End User License Agreement<br/><span>&amp; Terms of Service</span></h1>
+  <div class="meta-row">
+    <div class="meta-item"><strong>Product:</strong> Whatt??? (whatt.in)</div>
+    <div class="meta-item"><strong>Company:</strong> Pingora Technologies Pvt. Ltd.</div>
+    <div class="meta-item"><strong>Last Updated:</strong> February 15, 2026</div>
+    <div class="meta-item"><strong>Jurisdiction:</strong> India</div>
+  </div>
+</div>
+
+<!-- BODY -->
+<div class="doc-layout">
+
+  <!-- TOC -->
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ul>
+      <li><a href="#intro">Introduction</a></li>
+      <li><a href="#s1">1. License Grant</a></li>
+      <li><a href="#s2">2. Platform Role</a></li>
+      <li><a href="#s3">3. Payments</a></li>
+      <li><a href="#s4">4. Earnings & Withdrawals</a></li>
+      <li><a href="#s5">5. Call Recording Consent</a></li>
+      <li><a href="#s6">6. Prohibited Conduct</a></li>
+      <li><a href="#s7">7. Safety & Moderation</a></li>
+      <li><a href="#s8">8. User Generated Content</a></li>
+      <li><a href="#s9">9. Termination</a></li>
+      <li><a href="#s10">10. Limitation of Liability</a></li>
+      <li><a href="#s11">11. Governing Law</a></li>
+      <li><a href="#s12">12. Contact</a></li>
+    </ul>
+  </aside>
+
+  <!-- CONTENT -->
+  <main class="doc-content">
+
+    <div class="doc-section" id="intro">
+      <div class="clause-num">Preamble</div>
+      <h2>Introduction</h2>
+      <p>This End User License Agreement (<strong>"EULA"</strong> or <strong>"Agreement"</strong>) governs your use of the <strong>Whatt???</strong> mobile application (<strong>"App"</strong>), operated by <strong>Pingora Technologies Private Limited</strong> (<strong>"Company"</strong>, <strong>"we"</strong>, <strong>"our"</strong>, or <strong>"us"</strong>), a company incorporated under the laws of India.</p>
+      <p>By downloading, installing, accessing, or using the App, you agree to be bound by this Agreement. If you do not agree to these terms, you must not use the App.</p>
+      <div class="callout callout-info">Please read this Agreement carefully before using Whatt???. Your continued use of the App constitutes acceptance of any updates to this Agreement.</div>
+    </div>
+
+    <div class="doc-section" id="s1">
+      <div class="clause-num">Clause 01</div>
+      <h2>License Grant</h2>
+      <p>Subject to your compliance with this Agreement, the Company grants you a <strong>limited, non-exclusive, non-transferable, revocable license</strong> to:</p>
+      <ul>
+        <li>Download and install the App on a device you own or control</li>
+        <li>Access and use the App for personal, non-commercial purposes</li>
+        <li>Use the communication features and services available within the App</li>
+      </ul>
+      <p>This license does not include the right to sublicense, distribute, modify, adapt, translate, reverse engineer, decompile, or create derivative works of the App. All rights not expressly granted are reserved by the Company.</p>
+    </div>
+
+    <div class="doc-section" id="s2">
+      <div class="clause-num">Clause 02</div>
+      <h2>Platform Role</h2>
+      <p>The App provides a <strong>communication platform</strong> that connects users with one another for voice and messaging interactions.</p>
+      <ul>
+        <li>The Company does not employ users or act as their agent</li>
+        <li>We do not guarantee the quality, availability, or outcome of any interaction</li>
+        <li>We are a technology intermediary and not a party to user-to-user transactions</li>
+        <li>Users are solely responsible for their own conduct and interactions</li>
+      </ul>
+      <div class="callout callout-info">Whatt??? is a platform — we connect people, we do not employ or represent them.</div>
+    </div>
+
+    <div class="doc-section" id="s3">
+      <div class="clause-num">Clause 03</div>
+      <h2>Payments</h2>
+      <p>Certain features and interactions within the App require payment. By using paid features, you agree to the following:</p>
+      <ul>
+        <li>You agree to <strong>per-minute pricing</strong> as set by other users on the platform</li>
+        <li>All payments are processed securely through <strong>Razorpay</strong>, our authorized payment gateway</li>
+        <li>Payment for services is non-refundable once a session has commenced, unless otherwise required by applicable law</li>
+        <li>The Company reserves the right to modify pricing structures with reasonable notice</li>
+        <li>You are responsible for all charges incurred under your account</li>
+      </ul>
+      <div class="callout callout-warn">All payments are processed by Razorpay. Ensure your payment method is valid before initiating paid sessions.</div>
+    </div>
+
+    <div class="doc-section" id="s4">
+      <div class="clause-num">Clause 04</div>
+      <h2>Earnings and Withdrawals</h2>
+      <p>Eligible users who provide services on the platform may accumulate earnings and request payouts. The following conditions apply:</p>
+      <ul>
+        <li>The Company acts solely as a <strong>payment facilitator</strong> between users</li>
+        <li>Withdrawal requests are subject to minimum thresholds and processing timelines</li>
+        <li>Earnings are subject to applicable taxes; users are responsible for their own tax compliance</li>
+        <li>The Company reserves the right to withhold payouts in cases of suspected fraud, policy violation, or legal requirements</li>
+        <li>Payout methods and timelines are subject to change with prior notice</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="s5">
+      <div class="clause-num">Clause 05</div>
+      <h2>Call Recording Consent</h2>
+      <div class="callout callout-alert">Important: By using voice and communication features within the App, you explicitly acknowledge and consent to the recording of your calls.</div>
+      <p>All audio calls conducted on the Whatt??? platform are <strong>automatically recorded</strong> for the following purposes:</p>
+      <ul>
+        <li><strong>Safety monitoring</strong> — to detect and prevent harmful or abusive behavior</li>
+        <li><strong>Content moderation</strong> — to enforce community guidelines</li>
+        <li><strong>Fraud prevention</strong> — to identify and prevent unauthorized activity</li>
+        <li><strong>Legal compliance</strong> — to comply with applicable laws and regulatory requirements</li>
+      </ul>
+      <p>Recordings are stored on <strong>decentralized IPFS infrastructure</strong> and are accessible only to authorized personnel at Pingora Technologies Private Limited. Please refer to our <a href="privacy.html" style="color:var(--accent2)">Privacy Policy</a> for complete details on data retention and access.</p>
+    </div>
+
+    <div class="doc-section" id="s6">
+      <div class="clause-num">Clause 06</div>
+      <h2>Prohibited Conduct</h2>
+      <p>By using the App, you agree <strong>not</strong> to engage in any of the following activities:</p>
+      <ul>
+        <li>Sharing external contact details (phone numbers, email addresses, social media handles) with other users</li>
+        <li>Engaging in any illegal, exploitative, or harmful activity</li>
+        <li>Offering, requesting, facilitating, or engaging in sexual services of any kind</li>
+        <li>Harassing, abusing, threatening, or intimidating other users</li>
+        <li>Attempting to circumvent any security or access controls on the platform</li>
+        <li>Impersonating any person or entity, or misrepresenting your identity or affiliation</li>
+        <li>Distributing malware, spam, or any harmful or disruptive content</li>
+        <li>Using the platform for commercial advertising without prior written consent</li>
+      </ul>
+      <div class="callout callout-alert">Violations of this section may result in immediate account suspension or termination and may be reported to relevant authorities.</div>
+    </div>
+
+    <div class="doc-section" id="s7">
+      <div class="clause-num">Clause 07</div>
+      <h2>Safety and Moderation</h2>
+      <p>The Company takes user safety seriously and reserves the right to take the following actions at its sole discretion:</p>
+      <ul>
+        <li><strong>Monitor content</strong> — including messages, calls, and user activity — for violations of this Agreement</li>
+        <li><strong>Suspend or restrict accounts</strong> temporarily pending investigation</li>
+        <li><strong>Permanently remove users</strong> found to be in material violation of community guidelines</li>
+        <li>Report illegal activity to appropriate law enforcement agencies</li>
+        <li>Remove, edit, or hide any content that violates this Agreement</li>
+      </ul>
+      <p>Moderation decisions are made in accordance with our internal policies and applicable law. Users may appeal moderation decisions by contacting <strong>support@pingoratech.in</strong>.</p>
+    </div>
+
+    <div class="doc-section" id="s8">
+      <div class="clause-num">Clause 08</div>
+      <h2>User Generated Content</h2>
+      <p>The App enables users to create and share content including messages, audio, and other communications. With respect to such content:</p>
+      <ul>
+        <li>You are solely responsible for all content you generate, transmit, or make available through the App</li>
+        <li>The Company is not liable for any content created, shared, or transmitted by users</li>
+        <li>By using the App, you grant us a limited license to process and moderate your content as described in this Agreement and our Privacy Policy</li>
+        <li>You warrant that your content does not violate any third-party rights or applicable laws</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="s9">
+      <div class="clause-num">Clause 09</div>
+      <h2>Termination</h2>
+      <p>The Company may <strong>suspend or terminate your account</strong>, with or without notice, if you:</p>
+      <ul>
+        <li>Violate any provision of this Agreement</li>
+        <li>Engage in prohibited conduct as described in Clause 6</li>
+        <li>Provide false or misleading registration information</li>
+        <li>Create safety or legal risk for the Company or other users</li>
+      </ul>
+      <p>Upon termination, your license to use the App ceases immediately. You may request account deletion at any time via App Settings. Certain data may be retained as required by law or for safety purposes.</p>
+    </div>
+
+    <div class="doc-section" id="s10">
+      <div class="clause-num">Clause 10</div>
+      <h2>Limitation of Liability</h2>
+      <p>To the fullest extent permitted by applicable law:</p>
+      <ul>
+        <li>The App is provided on an <strong>"as is" and "as available"</strong> basis without warranties of any kind</li>
+        <li>The Company disclaims all warranties, express or implied, including merchantability, fitness for a particular purpose, and non-infringement</li>
+        <li>The Company shall not be liable for any indirect, incidental, special, consequential, or punitive damages arising from your use of, or inability to use, the App</li>
+        <li>Our total aggregate liability shall not exceed the amount paid by you to the Company in the three (3) months preceding the claim</li>
+      </ul>
+      <div class="callout callout-info">Nothing in this clause limits liability for fraud, death or personal injury caused by negligence, or any other liability that cannot be excluded under applicable law.</div>
+    </div>
+
+    <div class="doc-section" id="s11">
+      <div class="clause-num">Clause 11</div>
+      <h2>Governing Law</h2>
+      <p>This Agreement shall be governed by and construed in accordance with the laws of <strong>India</strong>. Any disputes arising out of or in connection with this Agreement shall be subject to the exclusive jurisdiction of the courts located in <strong>Bangalore, Karnataka, India</strong>.</p>
+      <p>If any provision of this Agreement is found to be invalid or unenforceable, the remaining provisions shall continue in full force and effect.</p>
+    </div>
+
+    <div class="doc-section" id="s12">
+      <div class="clause-num">Clause 12</div>
+      <h2>Contact Us</h2>
+      <p>If you have questions, concerns, or requests regarding this Agreement, please contact us:</p>
+      <ul>
+        <li><strong>Company:</strong> Pingora Technologies Private Limited</li>
+        <li><strong>Email:</strong> support@pingoratech.in</li>
+        <li><strong>Address:</strong> No 628/8, Tavarakere Madiwala, Tavarekere, Bangalore, Karnataka, India — 560029</li>
+      </ul>
+      <div class="callout callout-info">We aim to respond to all legal and compliance queries within 72 business hours.</div>
+    </div>
+
+  </main>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:.7rem;margin-bottom:.2rem">
+        <div class="logo-mark">P</div>
+        <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:1rem">Pingora Technologies</span>
+      </div>
+      <p>Empowering businesses with intelligent software, data-driven insights, and real-time communication infrastructure.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul><li><a href="https://whatt.in" target="_blank">whatt.in ↗</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="terms.html" style="color:var(--accent2)">Terms &amp; Conditions</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="refund.html">Refund Policy</a></li>
+        <li><a href="cookie.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Pingora Technologies Private Limited. All rights reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="terms.html">T&amp;C</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:support@pingoratech.in">support@pingoratech.in</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

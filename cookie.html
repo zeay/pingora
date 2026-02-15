@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cookie Policy — Whatt | Pingora Technologies</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{
+      --bg:#080c14;--surface:#0e1420;--surface2:#141c2e;
+      --border:rgba(99,179,255,0.12);--accent:#3b82f6;--accent2:#06b6d4;
+      --accent3:#a78bfa;--text:#e8edf5;--muted:#7a8ba8;
+      --cookie:#f59e0b;
+    }
+    html{scroll-behavior:smooth}
+    body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);overflow-x:hidden}
+    body::before{
+      content:'';position:fixed;inset:0;
+      background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+      pointer-events:none;z-index:0;opacity:.4
+    }
+
+    /* ── NAV ── */
+    nav{
+      position:sticky;top:0;z-index:100;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:1.1rem 4vw;
+      background:rgba(8,12,20,0.88);backdrop-filter:blur(16px);
+      border-bottom:1px solid var(--border)
+    }
+    .nav-logo{display:flex;align-items:center;gap:.7rem;text-decoration:none}
+    .logo-mark{
+      width:36px;height:36px;
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      border-radius:8px;display:grid;place-items:center;
+      font-family:'Syne',sans-serif;font-weight:800;font-size:1rem;
+      color:#fff;box-shadow:0 0 18px rgba(59,130,246,.35)
+    }
+    .nav-brand{font-family:'Syne',sans-serif;font-weight:700;font-size:1.05rem;color:var(--text)}
+    .nav-brand span{color:var(--accent)}
+    .nav-back{
+      display:inline-flex;align-items:center;gap:.4rem;
+      font-size:.85rem;color:var(--muted);
+      text-decoration:none;transition:color .2s
+    }
+    .nav-back:hover{color:var(--accent2)}
+
+    /* ── HERO ── */
+    .page-hero{padding:5rem 4vw 3rem;max-width:860px;margin:0 auto}
+    .breadcrumb{
+      display:flex;align-items:center;gap:.5rem;
+      font-size:.78rem;color:var(--muted);margin-bottom:1.4rem
+    }
+    .breadcrumb a{color:var(--muted);text-decoration:none;transition:color .2s}
+    .breadcrumb a:hover{color:var(--accent2)}
+    .breadcrumb span{color:var(--border)}
+    .page-badge{
+      display:inline-flex;align-items:center;gap:.5rem;
+      background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);
+      border-radius:100px;padding:.3rem .9rem;
+      font-size:.75rem;font-weight:600;color:var(--cookie);
+      letter-spacing:.05em;text-transform:uppercase;margin-bottom:1.2rem
+    }
+    .page-hero h1{
+      font-family:'Syne',sans-serif;
+      font-size:clamp(2rem,4vw,3.2rem);font-weight:800;
+      letter-spacing:-.02em;line-height:1.1;margin-bottom:.8rem
+    }
+    .page-hero h1 span{
+      background:linear-gradient(90deg,var(--cookie),#fbbf24);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text
+    }
+    .meta-row{
+      display:flex;flex-wrap:wrap;gap:1.2rem;margin-top:1.2rem;
+      padding:1.2rem 1.4rem;background:var(--surface);
+      border:1px solid var(--border);border-radius:10px
+    }
+    .meta-item{font-size:.82rem;color:var(--muted)}
+    .meta-item strong{color:var(--text);font-weight:500}
+
+    /* ── LAYOUT ── */
+    .doc-layout{
+      max-width:860px;margin:0 auto;padding:0 4vw 6rem;
+      display:grid;grid-template-columns:220px 1fr;gap:3rem;align-items:start
+    }
+    @media(max-width:720px){.doc-layout{grid-template-columns:1fr}.toc{display:none}}
+
+    /* ── TOC ── */
+    .toc{
+      position:sticky;top:80px;
+      background:var(--surface);border:1px solid var(--border);
+      border-radius:12px;padding:1.4rem;font-size:.83rem
+    }
+    .toc-title{
+      font-family:'Syne',sans-serif;font-size:.78rem;font-weight:700;
+      letter-spacing:.1em;text-transform:uppercase;
+      color:var(--cookie);margin-bottom:1rem
+    }
+    .toc ul{list-style:none;display:flex;flex-direction:column;gap:.5rem}
+    .toc ul li a{color:var(--muted);text-decoration:none;transition:color .2s;line-height:1.4}
+    .toc ul li a:hover{color:var(--cookie)}
+
+    /* ── DOC CONTENT ── */
+    .doc-section{margin-bottom:2.8rem;padding-top:1rem}
+    .clause-num{
+      font-size:.72rem;font-weight:700;letter-spacing:.1em;
+      text-transform:uppercase;color:var(--cookie);margin-bottom:.4rem
+    }
+    .doc-section h2{
+      font-family:'Syne',sans-serif;font-size:1.25rem;font-weight:700;
+      margin-bottom:.9rem;padding-bottom:.6rem;border-bottom:1px solid var(--border)
+    }
+    .doc-section p{
+      font-size:.92rem;color:var(--muted);line-height:1.8;
+      margin-bottom:.8rem;font-weight:300
+    }
+    .doc-section p strong{color:var(--text);font-weight:500}
+    .doc-section ul{
+      list-style:none;display:flex;flex-direction:column;
+      gap:.55rem;margin:.6rem 0 .8rem
+    }
+    .doc-section ul li{
+      display:flex;gap:.7rem;font-size:.9rem;
+      color:var(--muted);line-height:1.6;font-weight:300
+    }
+    .doc-section ul li::before{
+      content:'';width:5px;height:5px;
+      background:var(--cookie);border-radius:50%;
+      flex-shrink:0;margin-top:.55rem
+    }
+
+    /* ── COOKIE TYPE CARDS ── */
+    .cookie-grid{
+      display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.2rem 0
+    }
+    @media(max-width:600px){.cookie-grid{grid-template-columns:1fr}}
+    .cookie-card{
+      background:var(--surface);border:1px solid var(--border);
+      border-radius:10px;padding:1.2rem;
+      transition:border-color .2s
+    }
+    .cookie-card:hover{border-color:rgba(245,158,11,.35)}
+    .cookie-card-icon{font-size:1.4rem;margin-bottom:.6rem}
+    .cookie-card-title{
+      font-family:'Syne',sans-serif;font-size:.92rem;font-weight:700;
+      color:var(--text);margin-bottom:.4rem
+    }
+    .cookie-card-desc{font-size:.82rem;color:var(--muted);line-height:1.6;font-weight:300}
+    .cookie-card-badge{
+      display:inline-block;margin-top:.7rem;
+      border-radius:4px;font-size:.7rem;font-weight:600;
+      padding:.18rem .5rem;letter-spacing:.04em;text-transform:uppercase
+    }
+    .badge-required{background:rgba(248,113,113,.12);color:#f87171}
+    .badge-optional{background:rgba(245,158,11,.12);color:var(--cookie)}
+    .badge-analytics{background:rgba(59,130,246,.12);color:var(--accent2)}
+
+    /* ── COMPARISON TABLE ── */
+    .data-table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.85rem}
+    .data-table th{
+      background:var(--surface2);color:var(--text);
+      font-weight:600;padding:.7rem 1rem;text-align:left;
+      border-bottom:1px solid var(--border)
+    }
+    .data-table td{
+      padding:.65rem 1rem;color:var(--muted);
+      border-bottom:1px solid rgba(99,179,255,.06);
+      vertical-align:top;line-height:1.6
+    }
+    .data-table tr:last-child td{border-bottom:none}
+
+    /* ── CALLOUTS ── */
+    .callout{padding:1rem 1.2rem;border-radius:8px;margin:1rem 0;font-size:.88rem;line-height:1.65;border-left:3px solid}
+    .callout-cookie{background:rgba(245,158,11,.07);border-color:var(--cookie);color:#fcd34d}
+    .callout-info{background:rgba(59,130,246,.07);border-color:var(--accent);color:var(--accent2)}
+    .callout-warn{background:rgba(251,146,60,.07);border-color:#fb923c;color:#fcd34d}
+
+    /* ── CONSENT TOGGLE DEMO ── */
+    .consent-demo{
+      background:var(--surface);border:1px solid var(--border);
+      border-radius:12px;padding:1.4rem;margin:1.2rem 0
+    }
+    .consent-demo-title{
+      font-family:'Syne',sans-serif;font-size:.85rem;font-weight:700;
+      color:var(--text);margin-bottom:1rem
+    }
+    .toggle-row{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:.65rem 0;border-bottom:1px solid rgba(99,179,255,.06)
+    }
+    .toggle-row:last-child{border-bottom:none}
+    .toggle-label{font-size:.85rem;color:var(--muted)}
+    .toggle-label strong{color:var(--text);font-weight:500;display:block;font-size:.88rem}
+    .toggle{
+      position:relative;display:inline-block;
+      width:40px;height:22px;flex-shrink:0
+    }
+    .toggle input{opacity:0;width:0;height:0}
+    .slider{
+      position:absolute;cursor:pointer;inset:0;
+      background:var(--surface2);border-radius:22px;
+      border:1px solid var(--border);
+      transition:background .2s
+    }
+    .slider::before{
+      content:'';position:absolute;
+      width:14px;height:14px;left:3px;bottom:3px;
+      background:var(--muted);border-radius:50%;
+      transition:transform .2s,background .2s
+    }
+    input:checked + .slider{background:rgba(245,158,11,.3);border-color:var(--cookie)}
+    input:checked + .slider::before{transform:translateX(18px);background:var(--cookie)}
+    input:disabled + .slider{cursor:not-allowed;opacity:.6}
+
+    /* ── FOOTER ── */
+    footer{background:var(--bg);border-top:1px solid var(--border);padding:3rem 4vw 2rem}
+    .footer-top{
+      max-width:1200px;margin:0 auto;
+      display:grid;grid-template-columns:2fr 1fr 1fr 1fr;
+      gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid var(--border)
+    }
+    @media(max-width:900px){.footer-top{grid-template-columns:1fr 1fr}}
+    @media(max-width:500px){.footer-top{grid-template-columns:1fr}}
+    .footer-brand p{color:var(--muted);font-size:.85rem;line-height:1.7;margin-top:.8rem;max-width:280px;font-weight:300}
+    .footer-col h4{
+      font-family:'Syne',sans-serif;font-size:.82rem;font-weight:700;
+      letter-spacing:.08em;text-transform:uppercase;
+      color:var(--text);margin-bottom:1.1rem
+    }
+    .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem}
+    .footer-col ul li a{text-decoration:none;color:var(--muted);font-size:.83rem;transition:color .2s}
+    .footer-col ul li a:hover{color:var(--accent2)}
+    .footer-bottom{
+      max-width:1200px;margin:2rem auto 0;
+      display:flex;align-items:center;justify-content:space-between;
+      flex-wrap:wrap;gap:1rem
+    }
+    .footer-bottom p{font-size:.78rem;color:var(--muted)}
+    .footer-bottom-links{display:flex;gap:1.5rem}
+    .footer-bottom-links a{font-size:.78rem;color:var(--muted);text-decoration:none;transition:color .2s}
+    .footer-bottom-links a:hover{color:var(--text)}
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a class="nav-logo" href="index.html">
+    <div class="logo-mark">P</div>
+    <span class="nav-brand">Pingora <span>Technologies</span></span>
+  </a>
+  <a class="nav-back" href="index.html">← Back to Home</a>
+</nav>
+
+<!-- ── HERO ── -->
+<div class="page-hero">
+  <div class="breadcrumb">
+    <a href="index.html">Home</a><span>/</span>
+    <a href="index.html#products">Whatt</a><span>/</span>
+    <span style="color:var(--text)">Cookie Policy</span>
+  </div>
+  <div class="page-badge">🍪 Cookie Policy</div>
+  <h1>Cookie Policy<br/><span>How We Use Cookies</span></h1>
+  <div class="meta-row">
+    <div class="meta-item"><strong>Product:</strong> Whatt??? (whatt.in)</div>
+    <div class="meta-item"><strong>Company:</strong> Pingora Technologies Pvt. Ltd.</div>
+    <div class="meta-item"><strong>Last Updated:</strong> February 15, 2026</div>
+    <div class="meta-item"><strong>Applies To:</strong> whatt.in &amp; Whatt??? App</div>
+  </div>
+</div>
+
+<!-- ── BODY ── -->
+<div class="doc-layout">
+
+  <!-- TOC -->
+  <aside class="toc">
+    <div class="toc-title">Contents</div>
+    <ul>
+      <li><a href="#intro">What Are Cookies?</a></li>
+      <li><a href="#s1">1. How We Use Cookies</a></li>
+      <li><a href="#s2">2. Types of Cookies</a></li>
+      <li><a href="#s3">3. Cookies We Set</a></li>
+      <li><a href="#s4">4. Third-Party Cookies</a></li>
+      <li><a href="#s5">5. Your Choices</a></li>
+      <li><a href="#s6">6. Managing Preferences</a></li>
+      <li><a href="#s7">7. Do Not Track</a></li>
+      <li><a href="#s8">8. Policy Updates</a></li>
+      <li><a href="#s9">9. Contact</a></li>
+    </ul>
+  </aside>
+
+  <!-- CONTENT -->
+  <main class="doc-content">
+
+    <div class="doc-section" id="intro">
+      <div class="clause-num">Overview</div>
+      <h2>What Are Cookies?</h2>
+      <p>Cookies are small text files placed on your device — computer, smartphone, or tablet — when you visit a website or use a web-based application. They are widely used to make websites and apps work more efficiently, remember your preferences, and provide information to site owners.</p>
+      <p>This Cookie Policy explains what cookies <strong>Pingora Technologies Private Limited</strong> uses on <strong>whatt.in</strong> and the <strong>Whatt???</strong> application, why we use them, and the controls available to you.</p>
+      <div class="callout callout-cookie">By continuing to use whatt.in or the Whatt??? app, you consent to our use of cookies as described in this policy. You may withdraw consent at any time by adjusting your browser or device settings.</div>
+    </div>
+
+    <div class="doc-section" id="s1">
+      <div class="clause-num">Section 01</div>
+      <h2>How We Use Cookies</h2>
+      <p>We use cookies and similar tracking technologies for the following core purposes:</p>
+      <ul>
+        <li><strong>Authentication</strong> — to recognise you when you log in and keep your session secure</li>
+        <li><strong>Security</strong> — to detect and prevent fraudulent activity and protect your account</li>
+        <li><strong>Preferences</strong> — to remember your language, region, and display settings</li>
+        <li><strong>Performance</strong> — to understand how users interact with our platform so we can improve it</li>
+        <li><strong>Payments</strong> — to support secure payment flows via Razorpay</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="s2">
+      <div class="clause-num">Section 02</div>
+      <h2>Types of Cookies</h2>
+
+      <div class="cookie-grid">
+        <div class="cookie-card">
+          <div class="cookie-card-icon">🔒</div>
+          <div class="cookie-card-title">Strictly Necessary</div>
+          <div class="cookie-card-desc">Essential for the platform to function. They enable login, session management, and security features. Cannot be disabled.</div>
+          <span class="cookie-card-badge badge-required">Required</span>
+        </div>
+        <div class="cookie-card">
+          <div class="cookie-card-icon">⚙️</div>
+          <div class="cookie-card-title">Functional</div>
+          <div class="cookie-card-desc">Remember your choices — language, region, and interface preferences — so you don't have to set them again each visit.</div>
+          <span class="cookie-card-badge badge-optional">Optional</span>
+        </div>
+        <div class="cookie-card">
+          <div class="cookie-card-icon">📊</div>
+          <div class="cookie-card-title">Analytics</div>
+          <div class="cookie-card-desc">Help us understand how users navigate and use the platform, enabling us to improve performance and user experience.</div>
+          <span class="cookie-card-badge badge-analytics">Analytics</span>
+        </div>
+        <div class="cookie-card">
+          <div class="cookie-card-icon">💳</div>
+          <div class="cookie-card-title">Payment</div>
+          <div class="cookie-card-desc">Set by Razorpay to support secure, seamless payment processing. Governed by Razorpay's own privacy and cookie policies.</div>
+          <span class="cookie-card-badge badge-required">Required for Payments</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="doc-section" id="s3">
+      <div class="clause-num">Section 03</div>
+      <h2>Cookies We Set</h2>
+      <table class="data-table">
+        <tr>
+          <th>Cookie Name</th>
+          <th>Purpose</th>
+          <th>Duration</th>
+          <th>Type</th>
+        </tr>
+        <tr>
+          <td><code style="color:var(--cookie);font-size:.8rem">whatt_session</code></td>
+          <td>Maintains your authenticated login session</td>
+          <td>Session</td>
+          <td>Strictly Necessary</td>
+        </tr>
+        <tr>
+          <td><code style="color:var(--cookie);font-size:.8rem">whatt_auth_token</code></td>
+          <td>Secure token to keep you logged in across visits</td>
+          <td>30 days</td>
+          <td>Strictly Necessary</td>
+        </tr>
+        <tr>
+          <td><code style="color:var(--cookie);font-size:.8rem">whatt_csrf</code></td>
+          <td>Cross-site request forgery protection</td>
+          <td>Session</td>
+          <td>Strictly Necessary</td>
+        </tr>
+        <tr>
+          <td><code style="color:var(--cookie);font-size:.8rem">whatt_lang</code></td>
+          <td>Stores your preferred language setting</td>
+          <td>1 year</td>
+          <td>Functional</td>
+        </tr>
+        <tr>
+          <td><code style="color:var(--cookie);font-size:.8rem">whatt_theme</code></td>
+          <td>Stores your display and theme preferences</td>
+          <td>1 year</td>
+          <td>Functional</td>
+        </tr>
+        <tr>
+          <td><code style="color:var(--cookie);font-size:.8rem">whatt_analytics</code></td>
+          <td>Tracks anonymised page views and feature usage</td>
+          <td>90 days</td>
+          <td>Analytics</td>
+        </tr>
+        <tr>
+          <td><code style="color:var(--cookie);font-size:.8rem">whatt_cookie_consent</code></td>
+          <td>Records your cookie preferences and consent status</td>
+          <td>1 year</td>
+          <td>Strictly Necessary</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="doc-section" id="s4">
+      <div class="clause-num">Section 04</div>
+      <h2>Third-Party Cookies</h2>
+      <p>Certain features of our platform involve third-party services that may also set cookies on your device. We do not control these cookies — they are governed by the respective third party's privacy and cookie policies.</p>
+      <table class="data-table">
+        <tr><th>Third Party</th><th>Purpose</th><th>Policy Link</th></tr>
+        <tr>
+          <td><strong>Razorpay</strong></td>
+          <td>Payment processing, fraud prevention</td>
+          <td><a href="https://razorpay.com/privacy/" target="_blank" style="color:var(--accent2);font-size:.8rem">razorpay.com/privacy ↗</a></td>
+        </tr>
+        <tr>
+          <td><strong>AWS CloudFront</strong></td>
+          <td>CDN performance and request routing</td>
+          <td><a href="https://aws.amazon.com/privacy/" target="_blank" style="color:var(--accent2);font-size:.8rem">aws.amazon.com/privacy ↗</a></td>
+        </tr>
+      </table>
+      <div class="callout callout-info">We limit third-party integrations deliberately to protect your data. We do not use advertising or tracking pixels from social networks or ad networks.</div>
+    </div>
+
+    <div class="doc-section" id="s5">
+      <div class="clause-num">Section 05</div>
+      <h2>Your Choices</h2>
+      <p>You have meaningful control over which cookies are active. Below is an overview of your current consent settings:</p>
+
+      <div class="consent-demo">
+        <div class="consent-demo-title">🍪 Cookie Preferences</div>
+
+        <div class="toggle-row">
+          <div class="toggle-label">
+            <strong>Strictly Necessary Cookies</strong>
+            Required for login, security and core functionality
+          </div>
+          <label class="toggle">
+            <input type="checkbox" checked disabled>
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="toggle-row">
+          <div class="toggle-label">
+            <strong>Functional Cookies</strong>
+            Language, theme and preference memory
+          </div>
+          <label class="toggle">
+            <input type="checkbox" checked id="funcToggle">
+            <span class="slider"></span>
+          </label>
+        </div>
+
+        <div class="toggle-row">
+          <div class="toggle-label">
+            <strong>Analytics Cookies</strong>
+            Anonymised usage data to improve the platform
+          </div>
+          <label class="toggle">
+            <input type="checkbox" id="analyticsToggle">
+            <span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <p style="font-size:.82rem;color:var(--muted);margin-top:.5rem">The toggles above are illustrative. To manage your actual cookie preferences, please use your browser settings or the in-app settings on the Whatt??? application.</p>
+    </div>
+
+    <div class="doc-section" id="s6">
+      <div class="clause-num">Section 06</div>
+      <h2>Managing Your Preferences</h2>
+      <p>You can control and delete cookies through your browser settings. Here's how to do it in common browsers:</p>
+      <ul>
+        <li><strong>Google Chrome:</strong> Settings → Privacy and Security → Cookies and other site data</li>
+        <li><strong>Mozilla Firefox:</strong> Settings → Privacy &amp; Security → Cookies and Site Data</li>
+        <li><strong>Safari:</strong> Preferences → Privacy → Manage Website Data</li>
+        <li><strong>Microsoft Edge:</strong> Settings → Cookies and site permissions → Cookies and data stored</li>
+        <li><strong>Mobile (Android/iOS):</strong> Browser settings → Site settings → Cookies</li>
+      </ul>
+      <div class="callout callout-warn">Disabling strictly necessary cookies will prevent you from logging in and using core features of the Whatt??? platform. We recommend keeping these enabled.</div>
+    </div>
+
+    <div class="doc-section" id="s7">
+      <div class="clause-num">Section 07</div>
+      <h2>Do Not Track</h2>
+      <p>Some browsers offer a <strong>"Do Not Track" (DNT)</strong> setting that signals to websites that you do not wish to be tracked across sessions.</p>
+      <p>Currently, there is no universal standard for how websites should respond to DNT signals. We respect your privacy preferences and keep our tracking to the minimum necessary for the platform to function. We do not use cross-site tracking or serve behavioural advertising.</p>
+    </div>
+
+    <div class="doc-section" id="s8">
+      <div class="clause-num">Section 08</div>
+      <h2>Policy Updates</h2>
+      <p>We may update this Cookie Policy from time to time as our platform evolves or as legal requirements change. When we make material changes:</p>
+      <ul>
+        <li>The <strong>"Last Updated"</strong> date at the top of this page will be revised</li>
+        <li>Users will be notified via an in-app banner or notification</li>
+        <li>Continued use of the platform after the effective date constitutes acceptance of the updated policy</li>
+      </ul>
+    </div>
+
+    <div class="doc-section" id="s9">
+      <div class="clause-num">Section 09</div>
+      <h2>Contact Us</h2>
+      <p>For any questions or concerns about our use of cookies or this policy, please reach out:</p>
+      <ul>
+        <li><strong>Company:</strong> Pingora Technologies Private Limited</li>
+        <li><strong>Email:</strong> support@pingoratech.in</li>
+        <li><strong>Address:</strong> No 628/8, Tavarakere Madiwala, Tavarekere, Bangalore, Karnataka, India — 560029</li>
+      </ul>
+      <div class="callout callout-cookie">We aim to respond to all cookie-related enquiries within 72 business hours.</div>
+    </div>
+
+  </main>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div style="display:flex;align-items:center;gap:.7rem;margin-bottom:.2rem">
+        <div class="logo-mark">P</div>
+        <span style="font-family:'Syne',sans-serif;font-weight:700;font-size:1rem">Pingora Technologies</span>
+      </div>
+      <p>Empowering businesses with intelligent software, data-driven insights, and real-time communication infrastructure.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Products</h4>
+      <ul><li><a href="https://whatt.in" target="_blank">whatt.in ↗</a></li></ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="refund.html">Refund Policy</a></li>
+        <li><a href="cookie.html" style="color:var(--cookie)">Cookie Policy</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="index.html#about">About Us</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Pingora Technologies Private Limited. All rights reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="terms.html">T&amp;C</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="mailto:support@pingoratech.in">support@pingoratech.in</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
